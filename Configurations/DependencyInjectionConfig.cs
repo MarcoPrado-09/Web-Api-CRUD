@@ -15,6 +15,7 @@ namespace Web_Api_CRUD.Configurations
             {
                 services.AddScoped<ILivroRepository, LivroRepository>();
                 services.AddScoped<ILocalizacaoRepository, LocalizacaoRepository>();
+                services.AddScoped<IEstoqueRepository, EstoqueRepository>();
                 services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
                 return services;
