@@ -1,3 +1,7 @@
+using Microsoft.EntityFrameworkCore;
+using Web_Api_CRUD.Configurations;
+using Web_Api_CRUD.Data;
+
 namespace WebAPI
 {
     public class Program
@@ -12,6 +16,13 @@ namespace WebAPI
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddEntityFrameworkSqlServer()
+                .AddDbContext<LivrariaDbContext>(
+                    options => options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer"))
+                );
+            
+            builder.Services.ResolveDependencies();
 
             var app = builder.Build();
 
