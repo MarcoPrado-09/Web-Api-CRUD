@@ -1,8 +1,8 @@
 namespace Web_Api_CRUD.Models.Enum
 {
-    public enum PerfilEnum
+    public enum TipoPerfil
     {
-        Admin =1,
+        Admin = 1,
         Padrao = 2
     }
 }

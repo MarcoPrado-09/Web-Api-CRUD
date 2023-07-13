@@ -12,6 +12,7 @@ namespace Web_Api_CRUD.Data
         
         public DbSet<Livro> Livros { get; set; }
         public DbSet<Localizacao> Localizacoes { get; set; }
+        public DbSet<Estoque> Estoque { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
     }
 }
